@@ -21,15 +21,15 @@ Most AI‑learning tools give answers. Iskra gives questions.
 
 ## 🧠 How it works
 
-Iskra is a **daily micro‑session protocol** you follow with any AI chat (ChatGPT, Claude, Llama, etc.). Every session follows the same cycle:
+Iskra is a **daily micro‑session protocol** you follow with any AI chat (DeepSeek, Z.AI, Qwen, ChatGPT, Claude, LM-Studio, Llama, etc.). Every session follows the same cycle:
 
-1. **You paste** your `profile.md`, `progress.md`, and the **Iskra Core Prompt** into the chat.
+1. **You paste** the **Iskra Core Prompt** and your **vault file** into the chat.
 2. The AI adopts the role of a Socratic mentor.
 3. **Session unfolds:**
-   - **Retrieval warm‑up** — Reviewing concepts you’re about to forget, using spaced repetition.
-   - **Socratic diagnostic** — Probing your understanding of the current micro‑concept, scaffolding when you’re stuck, and checking for mastery.
-   - **Mastery decision** — Marking a concept as truly mastered, or scheduling further practice.
-4. The AI **outputs updated Markdown files**. You copy them back into your learning vault.
+   - **Retrieval warm‑up** — Reviewing concepts you're about to forget, using spaced repetition (1d → 3d → 7d → 14d → 30d → Mastered).
+   - **Socratic diagnostic** — Probing your understanding through tasks and questions. The mentor prefers **doing over explaining** — you'll apply concepts to novel situations whenever possible.
+   - **Mastery decision** — Promoting, holding, or resetting concepts based on your demonstrated understanding.
+4. The AI **outputs your updated vault file**. You copy it back. Done.
 
 No plugins, no special editors — just text and conversation.
 
@@ -37,26 +37,32 @@ No plugins, no special editors — just text and conversation.
 
 ## 📂 The learning vault
 
-Your vault contains three simple files:
+Your vault is a **single Markdown file** (`iskra-vault.md`) with three clearly separated sections:
 
-| File | Purpose |
-|------|---------|
-| `profile.md` | Your long‑term goal, motivation, background, and current focus. |
-| `progress.md` | Mastery map, spaced‑repetition queue, and session log. |
-| `unit.md` *(optional)* | A structured outline of the concepts you want to master, broken into daily‑sized pieces. |
+| Section | Purpose |
+|---------|---------|
+| **PROFILE** | Your goal, motivation, background, constraints, and daily time budget. |
+| **PROGRESS** | Mastery map (concept status + spaced‑repetition schedule) and session log. |
+| **UNIT** *(optional)* | A structured outline of the concepts you want to master, broken into daily‑sized pieces. |
 
-Every detail is human‑readable, diff‑friendly, and version‑control ready.
+Every detail is human‑readable, diff‑friendly, and version‑control ready. Sections are clearly delimited so the vault can be split into separate files at any time.
 
 ---
 
 ## 🚀 Quick start (v0.1)
 
-1. **Create your vault** — a folder on your computer with the three files above (even empty `progress.md` is fine).
-2. **Copy the Iskra Core Prompt** into your AI chat’s system instructions (or paste it at the start of your first conversation).
-3. **Start your first session** by pasting the contents of your vault. The AI will guide you through a friendly interview to bootstrap your `profile.md`, and your learning journey begins.
-4. **Repeat daily** — paste your updated files, and the AI picks up exactly where you left off.
+**Option A — All-in-one (simplest):** Grab [`vault/iskra-all-in-one.md`](vault/iskra-all-in-one.md). Paste the entire file into any AI chat. Done — one file, one paste.
 
-> The complete `v0.1` protocol specification, including the core prompt wording, mastery criteria, and spaced‑repetition details, is coming soon.
+**Option B — Prompt + vault (for repeat sessions):** Grab [`prompt/core-prompt.md`](prompt/core-prompt.md) and [`vault/iskra-vault.md`](vault/iskra-vault.md). Set the core prompt as your chat's system instructions (paste it once), then paste only the vault file each session.
+
+Either way, the mentor interviews you about your goals, generates a personalized curriculum, and your learning journey begins. Repeat daily — paste your updated file, and the mentor picks up exactly where you left off.
+
+### Mastery criteria
+
+A concept reaches **Mastered** when you:
+1. Demonstrate long‑term retention (pass review at 30‑day interval)
+2. **Apply** it to a novel situation (for practical skills) OR **explain** it clearly and distinguish it from related concepts (for theory)
+3. Do so without scaffolding — no hints, no leading questions
 
 ---
 
@@ -72,7 +78,8 @@ Iskra is in its earliest days. We’re designing the protocol **from first princ
 
 - Feedback on the Socratic cycle and scaffolding patterns
 - Experiments with different spaced‑repetition algorithms
-- Ideas for visualizing `progress.md`
+- Ideas for visualizing progress
+- Pre‑built unit outlines for popular topics
 - Testimonies from real learning sessions
 
 Open an issue or a discussion — let’s build the mentor we wish we’d always had.
