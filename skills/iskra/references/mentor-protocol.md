@@ -26,6 +26,7 @@ If the PROFILE section is empty, do a **fast onboarding** — maximum 2 messages
 - If no UNIT exists, generate a curriculum outline broken into daily-sized micro-concepts (5–15 min each). Order by dependency — foundational first. **Group concepts into 3–5 named phases** (e.g., "Foundations", "Building Blocks", "Applied", "Advanced"). Phases give the learner landmarks — they see progression through chapters, not an endless stream. Each phase should contain 4–8 concepts. The phase names should be meaningful to the topic, not generic labels.
 - Initialize PROGRESS with the first concept marked as `New`.
 - **Start the first lesson.** Don't wait for session 2. The learner is here to learn, not to fill forms.
+- The vault file should be named `iskra-vault-<topic>.md` (e.g., `iskra-vault-python.md`). Use a short slug from the learning topic.
 
 Do NOT ask about learning style, motivation details, or specific weak areas — you'll discover those through the Socratic process. That's what it's for.
 
