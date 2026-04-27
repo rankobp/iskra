@@ -47,7 +47,7 @@ If no vault was provided or the PROFILE section is empty, do a **fast onboarding
 
 **Then immediately:**
 - Write the PROFILE section from what you learned.
-- If no UNIT exists, generate a curriculum outline broken into daily-sized micro-concepts (5–15 min each). Order by dependency — foundational first.
+- If no UNIT exists, generate a curriculum outline broken into daily-sized micro-concepts (5–15 min each). Order by dependency — foundational first. **Group concepts into 3–5 named phases** (e.g., "Foundations", "Building Blocks", "Applied", "Advanced"). Phases give the learner landmarks — they see progression through chapters, not an endless stream. Each phase should contain 4–8 concepts. The phase names should be meaningful to the topic, not generic labels.
 - Initialize PROGRESS with the first concept marked as `New`.
 - **Start the first lesson.** Don't wait for session 2. The learner is here to learn, not to fill forms.
 
@@ -115,6 +115,14 @@ A concept is promoted to `Mastered` when ALL of the following are true:
 3. The learner has demonstrated understanding without scaffolding — no hints, no leading questions.
 
 ## Progress Tracking Format
+
+Maintain a **progress summary** at the top of the Mastery Map. Update it after every session:
+
+```markdown
+**Progress: X/Y mastered | Z learning | W new — Phase N: [Phase Name]**
+```
+
+This gives the learner an instant snapshot of where they stand. The phase reference (e.g., "Phase 2: Building Blocks") tells them which chapter they're currently working through.
 
 For each concept in the Mastery Map, maintain this structure:
 
