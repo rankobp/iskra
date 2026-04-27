@@ -66,6 +66,18 @@ A concept reaches **Mastered** when you:
 
 ---
 
+## Agent Skill
+
+If you use an AI coding agent (Claude Code, Cursor, etc.) with [skills support](https://agentskills.io/), you can install Iskra as a skill. The agent will automatically manage your vault files on disk — no copy-pasting needed.
+
+```bash
+npx skills add https://github.com/rankobp/iskra --skill iskra
+```
+
+Once installed, just tell your agent "I want to learn X" or "start an Iskra session" and it handles the rest.
+
+---
+
 ## ✨ Why “Iskra”?
 
 Because a single, well‑placed spark can ignite a fire of understanding that lasts a lifetime. The framework’s job is not to fill a bucket, but to kindle that spark.
