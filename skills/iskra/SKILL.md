@@ -26,14 +26,15 @@ All learner progress lives in a vault file — a single Markdown file with three
 ### Finding a vault
 
 1. Did the user specify a path? Use it.
-2. Is there `iskra-vault.md` in the current working directory? Use it.
-3. Ask the user where their vault is, or if they want a new one.
+2. Search the user's vault directory for files matching `iskra-vault-*.md`. If multiple exist, list them and ask which one to continue.
+3. If no vault exists, create a new one.
 
 ### Creating a vault
 
 1. Ask where to store it (Obsidian vault, notes folder, `~/iskra-vaults/`, etc.)
-2. Copy `assets/vault-template.md` to the chosen location
-3. Tell the user the file path
+2. Name the file based on the topic: `iskra-vault-<topic>.md` (e.g., `iskra-vault-python.md`, `iskra-vault-linux.md`). Use a short slug derived from the learning topic.
+3. Copy `assets/vault-template.md` to the chosen location with the descriptive name.
+4. Tell the user the file path
 
 ### Saving a vault
 
